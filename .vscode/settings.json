@@ -1,0 +1,15 @@
+{
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.printWidth": 80,
+    "prettier.jsxSingleQuote": true,
+    "prettier.useTabs": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "prettier.documentSelectors": [
+        "*.sass",
+        "*.tsx",
+        "*.ts"
+    ],
+    "prettier.bracketSameLine": true
+}

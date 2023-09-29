@@ -1,0 +1,41 @@
+/* neumorphism.sass */
+
+
+$primary-color: #007bff
+$border-radius-base: 8px
+
+
+// Layout
+.neumorphism-layout
+  background-color: #f0f0f0
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  border-radius: $border-radius-base
+
+.neumorphism-layout-header
+  background-color: $primary-color
+  color: #fff
+
+.neumorphism-layout-content
+  padding: 20px
+  background-color: #fff
+  border-radius: $border-radius-base
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+
+.neumorphism-layout-footer
+  background-color: $primary-color
+  color: #fff
+
+// Button
+.neumorphism-button
+  background-color: #f0f0f0
+  border-radius: 50%
+  box-shadow: 3px 3px 6px #c0c0c0, -3px -3px 6px #ffffff
+  width: 40px
+  height: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  &:hover
+    box-shadow: 4px 4px 8px #c0c0c0, -4px -4px 8px #ffffff
+    transition: box-shadow 0.3s ease-in-out
