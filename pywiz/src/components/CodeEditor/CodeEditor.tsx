@@ -10,9 +10,10 @@ interface EditorOptions {
 }
 
 export default function CodeEditor({code, setCode} : EditorOptions) {
-    const handleChange = () => {
-        setCode(code)
+    const handleChange = (newCode: string) => {
+        setCode(newCode)
     }
+    console.log(code);
   return (
     <AceEditor
     mode="python"
