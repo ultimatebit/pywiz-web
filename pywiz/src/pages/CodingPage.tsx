@@ -8,16 +8,15 @@ import {
   UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, theme, Row, Col, Card, Typography, Tag } from 'antd';
+import { Layout, Menu, Button, theme, Row, Col, Card, Typography, Tag, Select, Collapse } from 'antd';
 import CodeEditor from '../components/CodeEditor/CodeEditor';
+
 
 const { Header, Sider, Footer} = Layout;
 
 export default function CodingPage() {
     const [collapsed, setCollapsed] = useState(false);
-    const [code, setCode] = useState<string>("#!/pywiz/env python3.11")
     const navigate = useNavigate();
-
   return (
     <Layout className="neumorphism-layout" style={{height: "100%"}}>
     {/* <Sider trigger={null} collapsible collapsed={collapsed} className="neumorphism-layout" style={{height: "100%"}}> */}
@@ -75,7 +74,7 @@ export default function CodingPage() {
     <Row style={{height: "85%"}}>
       <Col span={123} style={{width: "45%"}}>
       <Card style={{ background: 'lightgray', height: '100%', width: "100%" }}>
-        <CodeEditor code={code} setCode={setCode}/>
+        <CodeEditor />
         <Row style={{backgroundColor: 'lightblue', height: "50px", marginTop: "20px"}}>
           <Col span={1234} style={{width: '25%'}}>
             <Button>Import</Button>
