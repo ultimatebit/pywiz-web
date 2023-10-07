@@ -7,10 +7,10 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
+  DownloadOutlined
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme, Row, Col, Card, Typography, Tag, Select, Collapse } from 'antd';
 import CodeEditor from '../components/CodeEditor/CodeEditor';
-
 
 const { Header, Sider, Footer} = Layout;
 
@@ -77,10 +77,16 @@ export default function CodingPage() {
         <CodeEditor />
         <Row style={{backgroundColor: 'lightblue', height: "50px", marginTop: "20px"}}>
           <Col span={1234} style={{width: '25%'}}>
-            <Button>Import</Button>
+            <Button>
+              <UploadOutlined></UploadOutlined>
+              Import
+            </Button>
           </Col>
           <Col span={1234} style={{width: '25%'}}>
-            <Button>Export</Button>
+            <Button>
+              <DownloadOutlined></DownloadOutlined>
+              Export
+            </Button>
           </Col>
           <Col span={1234} style={{width: '25%'}}>
           <Button>Format</Button>
