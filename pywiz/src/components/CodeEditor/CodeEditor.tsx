@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, } from 'react'
 import AceEditor from 'react-ace'
 import { Collapse, Select, Col, Row } from 'antd'
+import axios from 'axios';
 
 const version_options = [
   {label: '3.11.4', value: '3.11.4'},
@@ -65,10 +66,22 @@ export default function CodeEditor() {
   const handleThemeChange = (value: string) => {
     setTheme(value);
   }
-    const handleChange = (newCode: string) => {
-        setCode(newCode)
+  const fetchData = async () => {
+    try {
+      const response = await axios.post('/api'); // 不需要包含代理路径前缀
+      // 处理响应数据
+      console.log(response.data);
+    } catch (error) {
+      // 处理错误
+      console.error('请求出错：', error);
     }
-    console.log(code);
+  };
+  
+  const handleChange = (newCode: string) => {
+    setCode(newCode)
+    fetchData()
+  }
+    // console.log(code);
   return (
     <React.Fragment>
       <Row>
